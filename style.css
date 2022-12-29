@@ -1,0 +1,328 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+
+  scroll-behavior: smooth;
+}
+
+.greeting {
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.greeting-text-container {
+  flex: 3;
+  text-align: center;
+}
+
+.greeting-text {
+  color: #333;
+  font-size: 40vw;
+  user-select: none;
+}
+
+.greeting-img-cotainer {
+  flex: 1;
+}
+
+.greeting-img {
+  width: 100%;
+}
+
+.name-container {
+  height: 100vh;
+  background-color: rebeccapurple;
+}
+
+.name {
+  color: #333;
+  font-size: 20vw;
+  text-align: center;
+  line-height: 100vh;
+}
+
+.job-title-container {
+  height: 100vh;
+}
+
+.dark {
+  background: url(./img/bg1.png);
+}
+
+.purple {
+  background: rebeccapurple url(./img/bg2.png);
+}
+
+.job-title {
+  color: #333;
+  font-size: 8vw;
+  font-weight: 700;
+
+  line-height: 100vh;
+}
+
+.projects {
+  padding: 0 100px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.projects-title {
+  height: 30vh;
+  color: #333;
+  text-align: center;
+  font-size: 8vw;
+  user-select: none;
+}
+
+.project {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  width: 300px;
+  height: 600px;
+  flex: 1;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 3;
+}
+
+.phone-screen {
+  width: 267px;
+  height: 568px;
+  border-radius: 25px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  overflow: scroll;
+}
+
+.phone-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.screen-img {
+  width: 100%;
+}
+
+.project-detail {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+.project-title {
+  color: #555;
+  font-size: 5vw;
+}
+
+.project-desc {
+  color: #555;
+  font-size: 18px;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.project-btn {
+  background-color: transparent;
+  color: #555;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid #555;
+
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: all 1s linear;
+}
+
+.project-btn::before {
+  content: "View Demo";
+
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  color: #111;
+  line-height: 45px;
+
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  transition: all 1s ease-in-out;
+}
+
+.project-btn:hover {
+  color: #111;
+}
+
+.project-btn:hover::before {
+  left: 0;
+}
+
+.laptop {
+  flex: 1;
+  position: relative;
+  z-index: 3;
+}
+
+.laptop-img {
+  width: 600px;
+  height: 400px;
+}
+
+.laptop-screen {
+  /* background-color: blue; */
+  width: 450px;
+  height: 300px;
+
+  position: absolute;
+  left: 69px;
+  top: 20px;
+
+  overflow: scroll;
+}
+
+.laptop-screen::-webkit-scrollbar {
+  display: none;
+}
+
+.github-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+.github-title {
+  color: #555;
+  font-size: 100px;
+  text-align: center;
+}
+
+.dates {
+  color: #555;
+  font-size: 14px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.github-chart {
+  width: 820px;
+  text-align: center;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+
+  transition: all 3s linear;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+/* .github-chart:hover .active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+.github-chart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+} */
+
+.github-chart:hover .active {
+  background-color: aqua;
+}
+
+.gitsm {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-github {
+  color: #333;
+  font-size: 35px;
+  margin-right: 15px;
+
+  transition: all linear 0.5s;
+}
+
+.gitsm span {
+  color: #555;
+  font-size: 15px;
+}
+
+.gitsm:hover .fa-github {
+  color: aqua;
+}
+
+@media screen and (max-width: 1024px) {
+  .name {
+    font-size: 15vw;
+  }
+
+  .project {
+    height: max-content;
+    flex-direction: column;
+  }
+
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .laptop,
+  .phone {
+    transform: none !important;
+    margin: 50px 0;
+  }
+}
